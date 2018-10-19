@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        h1, p {
+            font-family: "Gill Sans", "Trebuchet MS", Calibri, sans-serif;
+            font-size: 13px;
+            color: #666666;
+        }
+        #body {
+            width: 960px;
+            margin: 0 auto;
+            background: #ddd;
+            padding: 10px;
+        }
+    </style>
+    <title>About GeoChart</title>
+</head>
+<body>
+    <div id="body">
+        <h1>Web service load time analysis</h1>
+        <p>This map represents the average page load time of our web service across different countries.  Hovering over a country will display a histogram of that country's data: this allows the viewer to get a sense of the <i>spread</i> of the data, not just the average.  Selecting two countries in succession charts an overlay of both.  If the raw volumes from the two countries are very different, you can click the 'view percentages' button to normalize both histograms for easy comparison.  Comparing, for example, India and China this way reveals a "fatter tail" for India: this sort of observation could guide how we approach site optimization in different locations.</p>
+        <p>The page load time data was collected from javascript, using the HTML5 <a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html">navigation timing API</a>, and then posted back to our web service.  The records are stored in a database and periodically analyzed to produce a aggregate summary, which is retrieved by this web page over AJAX.  The map is a free SVG resource retrieved from Wikipedia, and the choropleth ("heat map") data bindings and histograms are generated using the <a href = "http://d3js.org/">d3.js library</a>.</p>
+    </div>
+</body>
+</html>
