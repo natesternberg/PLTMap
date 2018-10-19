@@ -260,7 +260,6 @@ GeoChart = {
     },
     layoutPage: function () {
         var histogramDataFile = getUrlVars()['f'] || 'PageLoadTimeHistograms';
-        //histogramDataFile = '/data/' + histogramDataFile + '.txt';
         histogramDataFile = '/data/PageLoadTimeHistograms_V1.txt';
         d3.text(histogramDataFile + '?' + Math.floor(Math.random() * 1000), function (contents) {
             GeoChart.parsedData = d3.tsv.parse(contents);
