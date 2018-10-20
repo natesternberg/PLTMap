@@ -260,7 +260,9 @@ GeoChart = {
     },
     layoutPage: function () {
         var histogramDataFile = getUrlVars()['f'] || 'PageLoadTimeHistograms';
-        histogramDataFile = '/data/PageLoadTimeHistograms_V1.txt';
+        var path = window.location.pathname;
+        var pathName = path.substring(0, path.lastIndexOf('/') + 1);
+        histogramDataFile = pathName + 'data/PageLoadTimeHistograms_V1.txt';
         d3.text(histogramDataFile + '?' + Math.floor(Math.random() * 1000), function (contents) {
             GeoChart.parsedData = d3.tsv.parse(contents);
             var timeRange = null;
