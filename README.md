@@ -1,4 +1,2 @@
 # PLTMap
-Choropleth map of average page load times, with histograms.
-
-See it in action [here](https://natesternberg.github.io/PLTMap/).
+I once had a large data set of page load time records for a certain web site, along with a country identification.  I wanted to display the average page load time per country in a [choropleth map](https://en.wikipedia.org/wiki/Choropleth_map), but also allow the user to see the *spread* of the data for each country, not just the average, and this is the visualization I came up with (you can hover over a country to see a histogram of its data).  You can see what it looks like [here](https://natesternberg.github.io/PLTMap/).
